@@ -11,13 +11,13 @@ var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = "Acme Product";
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'pm-app',
-            template: "\n        <div><h1>{{pageTitle}}</h1>\n            <pm-products></pm-products>\n        </div>\n    "
-        })
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'pm-app',
+        template: "\n        <div><h1>{{pageTitle}}</h1>\n            <pm-products></pm-products>\n        </div>\n    "
+    })
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
