@@ -24,6 +24,7 @@
                             (click)='toggleImage()'>{{showImage ? 'Hide': 'Show'}} Image
                             </button>
                         </th>
+                        <th>Date</th>
                         <th>Product</th>
                         <th>Code</th>
                         <th>Available</th>
@@ -40,6 +41,7 @@
                             [style.width.px]='imageWidth'
                             [style.margin.px]='imageMargin'>
                     </td>
+                    <td> {{product.addDate | date:'medium'}}</td>
                     <td> {{product.productName}}</td>
                     <td> {{product.productCode | lowercase}}</td>
                     <td> {{product.releaseDate}}</td>

@@ -17,6 +17,7 @@ var ProductListComponent = (function () {
         this.products = [
             {
                 "productId": 1,
+                "addDate": 0,
                 "productName": "Leaf Rake",
                 "productCode": "GDN-0011",
                 "releaseDate": "March 19, 2016",
@@ -50,12 +51,16 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
+    ProductListComponent.prototype.ngOnInit = function () {
+        console.log('In OnInit');
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
     core_1.Component({
         selector: 'pm-products',
-        templateUrl: 'app/products/product-list.component.html'
+        templateUrl: 'app/products/product-list.component.html',
+        styleUrls: ['app/products/product-list.component.css']
     })
 ], ProductListComponent);
 exports.ProductListComponent = ProductListComponent;
