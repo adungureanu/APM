@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { ProductListComponent } from './products/product-list.component';
+import { StarComponent } from './shared/star.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,9 @@ import { ProductListComponent } from './products/product-list.component';
   ],
   declarations: [ 
     AppComponent,
-    ProductListComponent ],
+    ProductListComponent,
+    StarComponent
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -5,8 +5,9 @@ export interface IProduct{
     releaseDate: string;
     price: number;
     description: string;
-    startRating: number;
+    startRating:number;
     imageURL: string;
+     
 }
 
 export class Product implements IProduct{
