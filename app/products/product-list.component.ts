@@ -4,8 +4,9 @@ import { IProduct } from './product';
 import { ProductService } from './product.service';
 
 @Component({
-    templateUrl: './product-list.component.html',
-    styleUrls: ['./product-list.component.css']
+    selector: 'pm-products',
+    templateUrl: 'app/products/product-list.component.html',
+    styleUrls: ['app/products/product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List';
@@ -13,6 +14,7 @@ export class ProductListComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = false;
     errorMessage: string;
+    
 
     _listFilter: string;
     get listFilter(): string {
@@ -45,8 +47,7 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this._productService.getProducts()
-                    this.products = this.products;
-                    this.filteredProducts = this.products;
+                this.products = this._productService.getProducts();
+                this.filteredProducts = this.products;
     }
 }
